@@ -1,0 +1,50 @@
+{
+  "name": "cody",
+  "description": "Widget App Scaffold creator for HealthTrust Member Experience",
+  "version": "0.0.0",
+  "author": "Sparklers",
+  "bin": {
+    "cody": "./bin/run"
+  },
+  "bugs": "https://github.com/Git/cody/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.8",
+    "@oclif/config": "^1.10.4",
+    "@oclif/plugin-help": "^2.1.4",
+    "makensis": "^0.16.3"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.21.0",
+    "globby": "^8.0.2",
+    "rimraf": "^2.6.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/Git/cody",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "cody",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "Git/cody",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
